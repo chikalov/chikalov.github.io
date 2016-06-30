@@ -4,34 +4,12 @@
 <title>Загадки</title>
 </head>
 <body>
-<h3>Отгадате загадки!</h3>
-<p>Сто одежек и все без застежек<p/>
-<input type="text" id=puzzle1/>
-</br></br></br>
-<p>Зимой и летом одним цветом <p/>
-<input type="text" id=puzzle2/>
-<p>Не лает, не кусает, а в дом не пускает<p/>
-<input type="text" id=puzzle3/>
-</br></br></br>
-<p>Рыжая плутовка, хитрая да ловкая, в сарай попала, кур пересчитала<p/>
-<input type="text" id=puzzle4/>
-</br></br></br>
-<p>Два кольца, два конца, посередине гвоздик<p/>
-<input type="text" id=puzzle5/>
-</br></br></br>
-
-</br></br></br>
-<input type="button" value="Ответить" onClick="checkAnswers()"/>
-
 <script type="text/javascript">
-
 function checkAnswer(id, trueAnswer)
     {
         var userAnswer=document.getElementById(id).value;
-        If (userAnswer.toUpperCase()==trueAnswer.toUpperCase())
-            return true;
-        else
-            return false;
+        if (userAnswer.toUpperCase()==trueAnswer.toUpperCase()) return true;
+        else return false;
 }
 
 function checkAnswers()
@@ -39,10 +17,31 @@ function checkAnswers()
         var goodAnswers=0;
         if(checkAnswer('puzzle1','капуста')==true) goodAnswers++;
         if(checkAnswer('puzzle2','елка')) goodAnswers++;
+        if(checkAnswer('puzzle3','замок')) goodAnswers++;
+        if(checkAnswer('puzzle4','лиса')) goodAnswers++;
+        if(checkAnswer('puzzle5','ножницы')) goodAnswers++;
         if(goodAnswers==0) alert('Вы ничего не угадали');
         else alert('Количество правильных ответов:'+goodAnswers);
 }
 
-    </script>
+</script>
+<h3>Отгадате загадки!</h3>
+<p>Сто одежек и все без застежек<p/>
+<input type="text" id="puzzle1"/>
+</br></br></br>
+<p>Зимой и летом одним цветом <p/>
+<input type="text" id="puzzle2"/>
+</br></br></br>
+<p>Не лает, не кусает, а в дом не пускает<p/>
+<input type="text" id="puzzle3"/>
+</br></br></br>
+<p>Рыжая плутовка, хитрая да ловкая, в сарай попала, кур пересчитала<p/>
+<input type="text" id="puzzle4"/>
+</br></br></br>
+<p>Два кольца, два конца, посередине гвоздик<p/>
+<input type="text" id="puzzle5"/>
+</br></br></br>
+</br></br></br>
+<input type="button" value="Ответить" onClick="checkAnswers()"/>
 </body>
 </html>

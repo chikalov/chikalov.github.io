@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Угадай число</title>
+</head>
+<body>
+<meta charset="utf-8">
+<script type="text/javascript">
+    var answer = parseInt (Math.random()*10);
+    var igrok1 = prompt("Имя первого игрока ");
+    var igrok2 = prompt("Имя второго игрока ");
+    var i = 0;
+    while (i<1){
+        var number1= parseInt(prompt("Мы загадали число от 1 до 10. "+igrok1+" угадайте это число"));
+        if(number1 == answer){
+        alert("молодец "+igrok1+ " Вы угадали");
+        } else
+             if(number1 < answer){
+                alert("Вы ввыли слишком маленькое число");
+                } else if(number1 > answer){
+                alert("Вы ввыли слишком большое число");
+                }
+        i++;
+    }
+while (i>=1) {
+var number2 = parseInt(prompt("Мы загадали число от 1 до 10. "+igrok2+" угадайте это число"));
+if(number2 == answer) {
+alert("молодец "+igrok2+ " Вы угадали");
+} else if (number2 < answer){
+alert("Вы ввыли слишком маленькое число");
+}else if (number2 > answer) {
+alert ("Вы ввыли слишком большое число");
+}
+i--;
+}
+ alert("Я загадал " + answer);
+</script>
+</body>
+</html>
